@@ -14,7 +14,7 @@ class getSchools extends Command
      *
      * @var string
      */
-    protected $signature = 'app:get-schools';
+    protected $signature = 'school:all';
 
     /**
      * The console command description.
@@ -37,6 +37,6 @@ class getSchools extends Command
             $this->line("Codice: $school->codice | Nome: $school->nome | Salary: " . json_encode($school->salari));
         }
 
-        $this->line($management->mediaSalary());
+        $this->line("La media di salario delle scuole e di " . $management->mediaSalary());
     }
 }

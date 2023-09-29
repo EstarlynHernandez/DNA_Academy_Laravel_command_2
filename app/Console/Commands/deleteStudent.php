@@ -12,7 +12,7 @@ class deleteStudent extends Command
      *
      * @var string
      */
-    protected $signature = 'app:delete-student';
+    protected $signature = 'student:delete';
 
     /**
      * The console command description.

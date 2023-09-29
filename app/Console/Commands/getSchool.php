@@ -14,7 +14,7 @@ class getSchool extends Command
      *
      * @var string
      */
-    protected $signature = 'app:get-school';
+    protected $signature = 'school:find';
 
     /**
      * The console command description.

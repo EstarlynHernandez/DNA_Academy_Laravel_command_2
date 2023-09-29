@@ -26,7 +26,7 @@ Route::delete('/student/delete', [StudentController::class, 'destroy'])->name('s
 Route::get('/students/media', [MediaVotiController::class, 'index']);
 
 //Scuole
-Route::get('/schools', [SchoolController::class, 'index'])->name('school.index');
+Route::get('/', [SchoolController::class, 'index'])->name('school.index');
 Route::get('/schools/salari', [SchoolController::class, 'mediaSalari'])->name('school.salary');
 Route::get('/schools/media', [SchoolController::class, 'mediaScuola'])->name('school.media');
 Route::get('/schools/students', [SchoolController::class, 'mediaScuola'])->name('school.studenti');

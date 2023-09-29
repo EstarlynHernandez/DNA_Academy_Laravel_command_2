@@ -13,7 +13,7 @@ class saveScuola extends Command
      *
      * @var string
      */
-    protected $signature = 'app:save-scuola';
+    protected $signature = 'school:add';
 
     /**
      * The console command description.
@@ -28,11 +28,15 @@ class saveScuola extends Command
     public function handle(ScuolaFactory $factory, ScuolaRepository $repository)
     {
         do {
+            $salari = [];
             $nome = $this->ask("Come si chiama la scuola");
             do {
-                $salari[] = $this->ask("Inserisca uno dei salari della scuola");
+                $salario = $this->ask("Inserisca uno dei salari della scuola");
+                if ($salario != null) {
+                    $salari[] = $salario;
+                }
                 $addSalary = $this->ask("vuoi aggiungere altri salari");
-            } while ($addSalary === 'y' || $salari === 'si' || $salari === 'yes' || $salari === 's');
+            } while ($addSalary === 'y' || $addSalary === 'si' || $addSalary === 'yes' || $addSalary === 's');
 
             $scuola = $factory::create($nome, null, $salari);
             $repository->addScuola($scuola);

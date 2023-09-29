@@ -13,7 +13,7 @@ class updateStudent extends Command
      *
      * @var string
      */
-    protected $signature = 'app:update-student';
+    protected $signature = 'student:update';
 
     /**
      * The console command description.

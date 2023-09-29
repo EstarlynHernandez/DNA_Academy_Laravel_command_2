@@ -12,7 +12,7 @@ class getStudents extends Command
      *
      * @var string
      */
-    protected $signature = 'app:get-students';
+    protected $signature = 'student:all';
 
     /**
      * The console command description.

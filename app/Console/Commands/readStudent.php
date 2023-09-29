@@ -12,7 +12,7 @@ class readStudent extends Command
      *
      * @var string
      */
-    protected $signature = 'app:get-student';
+    protected $signature = 'student:get';
 
     /**
      * The console command description.
@@ -27,11 +27,16 @@ class readStudent extends Command
     public function handle(StudentiRepository $repository): void
     {
         $matricola = $this->ask("Quale e la matricola dello studente che state cercando");
+        try {
+
         $student = $repository->getStudent($matricola);
 
         $this->line("Id: $student->matricola");
         $this->line("Nome: $student->nome");
         $this->line("Cognome: $student->cognome");
         $this->line("Voti: Math " . $student->voti[0] . ", scienza " . $student->voti[1] . ", informatica " . $student->voti[2]);
+        } catch (\Exception $e) {
+            $this->warn('Studente non trovato');
+        }
     }
 }

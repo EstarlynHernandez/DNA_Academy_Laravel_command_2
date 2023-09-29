@@ -14,7 +14,7 @@ class saveStudent extends Command
      *
      * @var string
      */
-    protected $signature = 'app:save-student';
+    protected $signature = 'student:add';
 
     /**
      * The console command description.

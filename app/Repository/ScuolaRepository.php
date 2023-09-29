@@ -57,6 +57,20 @@ class ScuolaRepository
         return $delete;
     }
 
+    public function updateScuola($newScuola)
+    {
+        /**
+         * @var School $scuola
+         */
+        foreach ($this->scuole as $key => $scuola) {
+            if ($scuola->codice === $newScuola->codice) {
+                $this->scuole[$key] = $newScuola;
+            }
+        }
+
+        $this->saveInCsv();
+    }
+
     public function addScuola(School $scuola): void
     {
         $this->scuole[] = $scuola;

@@ -13,7 +13,7 @@ class medieScuole extends Command
      *
      * @var string
      */
-    protected $signature = 'app:medie-scuole';
+    protected $signature = 'school:medie';
 
     /**
      * The console command description.

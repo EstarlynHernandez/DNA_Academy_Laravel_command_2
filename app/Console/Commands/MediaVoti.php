@@ -12,7 +12,7 @@ class MediaVoti extends Command
      *
      * @var string
      */
-    protected $signature = 'app:media-voti';
+    protected $signature = 'student:media';
 
     /**
      * The console command description.

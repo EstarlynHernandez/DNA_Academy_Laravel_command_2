@@ -13,7 +13,7 @@ class bestStudent extends Command
      *
      * @var string
      */
-    protected $signature = 'app:best-student';
+    protected $signature = 'school:best_student';
 
     /**
      * The console command description.
