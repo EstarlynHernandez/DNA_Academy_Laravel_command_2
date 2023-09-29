@@ -1,2 +1,2 @@
-# DNA Academy Esercizio Laravel Classi e Controller
+# DNA Academy Esercizio Laravel Comandi e Controller
 
